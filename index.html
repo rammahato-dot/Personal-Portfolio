@@ -2,27 +2,55 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ram - Developer Portfolio</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Ram Mahato · Web Developer</title>
 
-    <!-- Google Fonts -->
+    <meta
+      name="description"
+      content="Portfolio of Ram Mahato — frontend-focused web developer crafting performant, user-centered digital experiences."
+    />
+    <meta property="og:title" content="Ram Mahato · Web Developer" />
+    <meta
+      property="og:description"
+      content="Explore Ram’s featured projects, services, and experience in modern web development."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/social-preview.png" />
+    <meta property="og:url" content="https://your-domain.example.com" />
+    <link rel="canonical" href="https://your-domain.example.com" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- External CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- Header -->
-    <header>
-      <nav>
-        <div class="logo">Ram's Portfolio</div>
-        <ul>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="home">
+      <nav class="nav">
+        <div class="logo" aria-label="Home">
+          <a href="#home">Ram<span>'s Portfolio</span></a>
+        </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
@@ -30,154 +58,177 @@
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <span aria-hidden="true">🌗</span>
+        </button>
       </nav>
     </header>
 
-    <!-- Hero Section -->
-    <main>
-      <section class="firstSection" id="home">
-        <div class="leftSection">
-          Hi, My name is <span class="purple">Ram</span>
-          <div>and I am a passionate</div>
-          <span id="element"></span>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-text">
+          <p class="eyebrow">Hello there 👋</p>
+          <h1 id="hero-title">Hi, I’m <span class="highlight">Ram Mahato</span>.</h1>
+          <p class="hero-subtitle">
+            <span class="sr-only">My specialties include </span>
+            <span id="typed-element">building modern web experiences.</span>
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View Projects</a>
+            <a class="btn secondary" href="#contact">Let’s work together</a>
+          </div>
         </div>
-        <div class="rightSection">
-          <img src="avatar.png" alt="Ram Mahato profile photo" />
-        </div>
+        <figure class="hero-figure">
+          <img
+            src="avatar.png"
+            alt="Portrait illustration of Ram Mahato"
+            width="320"
+            height="320"
+          />
+          <figcaption>Frontend Developer · Problem Solver · Coffee Enthusiast</figcaption>
+        </figure>
       </section>
 
-      <hr />
-
-      <!-- About Section -->
       <section class="aboutSection" id="about">
-        <h1>About Me</h1>
-        <p>
-          I am a dedicated web developer passionate about creating modern,
-          user-friendly, and scalable digital experiences. My work combines
-          clean code, strong design sense, and practical problem-solving.
-        </p>
+        <header>
+          <h2>About Me</h2>
+          <p class="section-lead">
+            I craft performant, accessible interfaces with delightful details.
+          </p>
+        </header>
+        <div class="about-grid">
+          <p>
+            I’m a dedicated web developer passionate about creating modern, user-friendly,
+            and scalable digital experiences. My work combines clean code, a strong design
+            sense, and practical problem-solving.
+          </p>
+          <ul class="about-list">
+            <li><span>Core Stack:</span> HTML, CSS, JavaScript, React</li>
+            <li><span>Tools:</span> Figma, Git, Vite, REST APIs</li>
+            <li><span>Focus Areas:</span> Accessibility, Performance, Design Systems</li>
+          </ul>
+        </div>
       </section>
 
-      <hr />
-
-      <!-- Services Section -->
       <section class="servicesSection" id="services">
-        <h1>Services</h1>
-        <div class="services">
-          <div class="service-card">
-            <h2>Web Development</h2>
+        <header>
+          <h2>Services</h2>
+          <p class="section-lead">How I can help your next project succeed.</p>
+        </header>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Web Development</h3>
             <p>
-              Responsive, high-performance websites built with modern tools and
-              best practices.
+              Responsive, high-performance web apps built with modern tools and best practices.
             </p>
-          </div>
-          <div class="service-card">
-            <h2>UI/UX Design</h2>
+          </article>
+          <article class="card">
+            <h3>UI/UX Design</h3>
             <p>
-              Clean, modern designs that focus on usability and visual appeal.
+              Clean, modern interfaces that balance usability with aesthetics for measurable impact.
             </p>
-          </div>
-          <div class="service-card">
-            <h2>Freelancing</h2>
+          </article>
+          <article class="card">
+            <h3>Freelancing</h3>
             <p>
-              Offering flexible freelance services tailored to client needs and
-              deadlines.
+              Flexible, collaborative partnerships tailored to your goals, timelines, and budget.
             </p>
-          </div>
+          </article>
         </div>
       </section>
 
-      <hr />
-
-      <!-- Projects Section -->
       <section class="projectsSection" id="projects">
-        <h1>Projects</h1>
-        <div class="projects">
-          <div class="project-card">
-            <h2>Portfolio Website</h2>
-            <p>
-              A modern responsive personal portfolio built with HTML, CSS, and
-              JavaScript.
-            </p>
-          </div>
-          <div class="project-card">
-            <h2>Weather App</h2>
-            <p>
-              Real-time weather updates using a public API with dynamic UI.
-            </p>
-          </div>
-          <div class="project-card">
-            <h2>Task Manager</h2>
-            <p>
-              A simple task management web app with CRUD features and local
-              storage.
-            </p>
-          </div>
+        <header>
+          <h2>Projects</h2>
+          <p class="section-lead">Selected work that showcases my end-to-end process.</p>
+        </header>
+        <div class="card-grid">
+          <article class="project-card">
+            <header>
+              <h3>Portfolio Website</h3>
+              <span class="pill">HTML · CSS · JS</span>
+            </header>
+            <p>Modern responsive personal portfolio with polished micro-interactions.</p>
+            <a href="#" class="project-link">View case study</a>
+          </article>
+          <article class="project-card">
+            <header>
+              <h3>Weather App</h3>
+              <span class="pill">API · Vanilla JS</span>
+            </header>
+            <p>Real-time weather dashboard featuring location search and animated backgrounds.</p>
+            <a href="#" class="project-link">Live demo</a>
+          </article>
+          <article class="project-card">
+            <header>
+              <h3>Task Manager</h3>
+              <span class="pill">React · Local Storage</span>
+            </header>
+            <p>CRUD-enabled productivity tool with drag-and-drop sorting and smart filters.</p>
+            <a href="#" class="project-link">GitHub repo</a>
+          </article>
         </div>
       </section>
 
-      <hr />
-
-      <!-- Work Experience Section -->
       <section class="experienceSection" id="experience">
-        <h1>Work Experience</h1>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-date">2023</div>
-            <div class="timeline-content">
-              <h2>Frontend Developer Intern</h2>
-              <p>
-                Worked on small projects including responsive landing pages and
-                UI prototypes.
-              </p>
+        <header>
+          <h2>Experience</h2>
+          <p class="section-lead">Evidence that I’ve been around the code block.</p>
+        </header>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div>
+              <p class="timeline-year">2025</p>
+              <h3>Personal Projects</h3>
+              <p>Built multiple web apps, including this portfolio, a weather app, and a task manager.</p>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2024</div>
-            <div class="timeline-content">
-              <h2>Freelance Web Developer</h2>
-              <p>
-                Delivered custom websites for clients and improved SEO and
-                performance optimization.
-              </p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div>
+              <p class="timeline-year">2024</p>
+              <h3>Freelance Web Developer</h3>
+              <p>Delivered custom websites optimized for SEO, performance, and conversion.</p>
             </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">2025</div>
-            <div class="timeline-content">
-              <h2>Personal Projects</h2>
-              <p>
-                Built multiple web apps including portfolio, weather app, and
-                task manager.
-              </p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-marker" aria-hidden="true"></div>
+            <div>
+              <p class="timeline-year">2023</p>
+              <h3>Frontend Developer Intern</h3>
+              <p>Designed and built responsive landing pages and interactive UI prototypes.</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ol>
       </section>
 
-      <hr />
-
-      <!-- Contact Section -->
       <section class="contactSection" id="contact">
-        <h1>Contact Me</h1>
-        <p>
-          Let's collaborate on your next project! You can reach me via email or
-          connect on LinkedIn.
-        </p>
-        <div class="contact-buttons">
-          <a href="mailto:rammahato5566@gmail.com" class="btn">Email Me</a>
+        <header>
+          <h2>Let’s Talk</h2>
+          <p class="section-lead">
+            Ready to collaborate? I’d love to hear about your next big idea.
+          </p>
+        </header>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:rammahato5566@gmail.com">Email Me</a>
           <a
+            class="btn secondary"
             href="https://www.linkedin.com/in/ram-mahato-737ab1302"
             target="_blank"
-            class="btn"
-            >LinkedIn</a
+            rel="noreferrer"
           >
+            Connect on LinkedIn
+          </a>
         </div>
       </section>
     </main>
 
-    <!-- Scripts -->
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Ram Mahato. Built with curiosity and a touch of caffeine.</p>
+    </footer>
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
